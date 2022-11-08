@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>请回答2002：新闻系记忆</title>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+:root {
+    --border-color: #7591AD;
+    --text-color: #34495e;
+    --color1: white;
+    --color2: #bbc8ca;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #65a0c2;
+}
+#header{
+    width: 100%;
+}
+
+
+#talk {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif, Arial, 'Microsoft Yahei';
+    flex-wrap: wrap;
+
+}
+
+p {
+    width: 300px;
+    margin: 50px;
+    padding: 10px;
+    background-color: var(--color1);
+    border-radius: 11px;
+    /* 投影 */
+    box-shadow: 7px 7px var(--color2);
+    /* 动画效果 50%的时候向上移动20px */
+    animation: animate1 4s ease-in-out infinite;
+}
+
+/* 实现底部横线与圆点 */
+
+p::after, p::before {
+    position: absolute;
+    content: '';
+    height: 11px;
+    left: 6px;
+    background-color: var(--color1);
+    border-radius: 11px;
+    /* 投影 */
+    box-shadow: 7px 7px var(--color2);
+}
+
+/* 单独定义底部横线的样式，宽度为50px */
+
+p::after {
+    width: 50px;
+    bottom: -25px;
+    /* 动画效果 50%的时候向上移动10px 加上P元素向上移动20，真实移动像素为20+10px */
+    animation: animate2 4s ease-in-out infinite;
+}
+
+/* 单独定义底部圆点的样式，宽度为11px */
+
+p::before {
+    width: 11px;
+    bottom: -50px;
+    /* 动画效果 50%的时候向上移动15px 加上P元素向上移动20，真实移动像素为20+15px */
+    animation: animate3 4s ease-in-out infinite;
+}
+
+@keyframes animate1 {
+    /* 初始化和结束状态为默认 */
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes animate2 {
+    /* 初始化和结束状态为默认 */
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes animate3 {
+    /* 初始化和结束状态为默认 */
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div id="header">
+    <div id="zhonglou">
+        <img src="image/钟楼.png" width="100%" alt="">
+    </div>
+</div>
+
+<div id="talk">
+<p>DV课作业，自己拍摄剪辑MV</p>
+<p>实习</p>
+<p>李日老师的《中国新闻事业史》课程，每周五下午下课时，都会对同学们说一句“周末愉快”，简单四个字让我有足够轻松愉快的心情，在烟大新闻系读书学生，感谢新闻系老师们的付出！</p>
+<p>央媒大实习</p>
+<p>退寝前一晚 回来的零零星星几个人 操场上唱歌嗑瓜子还有学长在旁边弹吉他</p>
+<p>毕业时老师让别着急工作，我没听劝</p>
+<p>平安夜为了拍作业在新百冻了一晚上拍吹笛子的老爷爷</p>
+<p>人民日报实习</p>
+<p>下雪天摔跤，手上留了一个疤</p>
+<p>去鸡鸣岛拍摄海草房；摄影课；和舍友们一起的朝夕</p>
+<p>和舍友们美好的集体生活</p>
+<p>北京实习</p>
+<p>大二时把学费进自行车了，卖给大一新生。</p>
+<p>作为校报通讯员第一次发表作品</p>
+<p>李日老师的课</p>
+<p>05年的那场暴风雪</p>
+<p>每一次的外采活动都很难忘</p>
+<p>办记者节</p>
+<p>二十周年校庆的那个夜晚！</p>
+<p>记者节被取消</p>
+<p>大二参与省运会开幕式表演</p>
+<p>毕业的6月通宵K歌后去东门看一场海上日出</p>
+<p>办报纸、说相声。</p>
+<p>能在烟大，就已经很难忘了</p>
+<p>参与《烟大新闻报》创办</p>
+<p>共同承办记者节</p>
+<p>熬夜做网站，做报纸 ，做杂志</p>
+<p>参与创办《烟大新闻报》、烟大广播台</p>
+<p>毕业前夕的聚会，大家哭成一片，原以为是不舍，现在才知道是剑未佩齐，已是江湖，无人能免。</p>
+<p>去烟台日报社实习</p>
+<p>寒冬拍日出</p>
+<p>新闻系学姐说分手，我在操场上第一次体会到心痛的感觉</p>
+<p>大实习</p>
+<p>辩论赛上代表学院直刚法学院</p>
+<p>熬夜剪片子</p>
+<p>筹办记者节</p>
+<p>记者节</p>
+<p>烟台最大的一场大雪，校园美的不真实</p>
+<p>程老师带领我们去体验射箭</p>
+<p>获得交换生的宝贵经历</p>
+<p>办记者节和大实习</p>
+<p>和同学们出游</p>
+
+</div>
+
+</body>
+
+</html>

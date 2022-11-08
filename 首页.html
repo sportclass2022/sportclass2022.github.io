@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+	<title>烟台大学新闻系20年系庆网</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		
+		#logo{
+			width: 100%;
+			font-size: 0;
+		}
+		#menu{
+			width: 100%;
+		}
+
+		#menu p{
+			float: left;
+			width: 16.66%;
+			height: 60px;
+			background-color: #661010;
+			color: white;
+			text-align: center;
+			padding: 0;
+			font-size: 100%;
+			line-height: 60px;
+		}
+		#menu p:hover{background-color: #bf5a5a;}
+
+		#background{height: 100%;
+			position: fixed;
+			left: 0;
+			top: 0;
+			z-index: -1;}
+		#footer{
+			background-color:#661010 ;
+			width: 100%;
+			height: 125px;
+			color: white;
+			text-align: center;
+			position: relative;
+			bottom: 0;
+			line-height: 40px;
+			margin-top: 30px;
+		}
+		.link{
+			display: inline-block;
+			border: 1px solid white;
+			color: white;
+			width: 150px;
+			height: 30px;
+			font-size: 14px;
+			height: 30px;
+			margin: 5px;
+			line-height: 30px;
+
+		}
+		#news{
+			width: 100%;
+			margin: 0 auto;
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+
+		}
+		#newsphoto{
+			margin-top: 1.5%;
+			overflow: hidden;
+		}
+		.newsletter{
+			width: 365px;
+			margin: 20px 60px;
+
+		}
+		.newspiece{
+			width: 365px;
+			border-bottom: 1px solid grey;
+			height: 30px;
+			margin-bottom: 20px;
+			color: black;
+
+
+		}
+		.newspiece:hover{ 
+			color: #b3112c;
+			font-size: 102%;
+
+		}
+		.QA{
+			width: 360px;
+			height: 340px;
+			font-size: 20px;
+			margin-top: 1.5%;
+		}
+		#memory{
+			background-color: #98646c; 
+			height: 60px;
+			margin-bottom: 20px;
+			color: white;
+			padding: 50px 10px;
+		}/*新闻系记忆*/
+		#memory:hover{background-color: white;color: #98646c;}
+
+		#speech{
+			background-color: #544c6c;
+			height: 60px;
+			color: white;
+			padding: 50px 10px;
+		}/*对学弟学妹说的话*/
+		#speech:hover{background-color: white;color: #544c6c;}
+
+		span{
+			background-color: #b3112c;
+			color: white;
+
+		}
+		a{text-decoration: none;}
+
+
+
+ul,li {list-style: none;}
+.box{width: 400px;height: 340px;overflow: hidden;position: relative;} /*图片框*/
+.box-1 ul{}
+.box-1 ul li{width: 400px;height: 340px;position: relative;overflow: hidden;} /*图片*/
+.box-1 ul li img{display:block;width: 400px; height: 340px;}/*图片压缩*/
+.box-1 ul li h2{position: absolute;left: 0;bottom: 0;height: 40px;width:300px;background: rgba(25,25,20,.6);text-indent: 2em;
+				padding-right:500px ;font-size: 15px;line-height: 40px;text-overflow: ellipsis;overflow: hidden;
+				white-space: nowrap;font-weight: normal;color: ghostwhite}/*图片名称*/
+
+.box-2{position: absolute;right: 10px;bottom: 14px;}/*右下角黑点位置*/
+
+.box-2 ul li{float:left;width: 12px;height: 12px;overflow: hidden; margin: 0 5px; border-radius: 50%;
+				background: rgba(0,0,0,0.5);text-indent: 100px;cursor: pointer;}/*黑点大小*/
+
+
+.box-2 ul .on{background: rgba(255,255,255,0.6);}
+
+
+	</style>
+	<script type="text/javascript">
+window.onload = function(){
+	function $(param){
+		if(arguments[1] == true){
+			return document.querySelectorAll(param);
+		}else{
+			return document.querySelector(param);
+		}
+	}
+	var $box = $(".box");
+	var $box1 = $(".box-1 ul li",true);
+	var $box2 = $(".box-2 ul");
+	var $box3 = $(".box-3");
+	var $length = $box1.length;
+	
+	var str = "";
+	for(var i =0;i<$length;i++){
+		if(i==0){
+			str +="<li class='on'>"+(i+1)+"</li>";
+		}else{
+			str += "<li>"+(i+1)+"</li>";
+		}
+	}
+	$box2.innerHTML = str;
+	
+	var current = 0;
+	
+	var timer;
+	timer = setInterval(go,2500);
+	function go(){
+		for(var j =0;j<$length;j++){
+			$box1[j].style.display = "none";
+			$box2.children[j].className = "";
+		}
+		if($length == current){
+			current = 0;
+		}
+		$box1[current].style.display = "block";
+		$box2.children[current].className = "on";
+		current++;
+	}
+	
+	for(var k=0;k<$length;k++){
+		$box1[k].onmouseover = function(){
+			clearInterval(timer);
+		}
+		$box1[k].onmouseout = function(){
+			timer = setInterval(go,2500);
+		}
+	}
+	for(var p=0;p<$box3.children.length;p++){
+		$box3.children[p].onmouseover = function(){
+			clearInterval(timer);
+		};
+		$box3.children[p].onmouseout = function(){
+			timer = setInterval(go,2500);
+		}
+	}
+	
+	for(var u =0;u<$length;u++){
+		$box2.children[u].index  = u;
+		$box2.children[u].onmouseover = function(){
+			clearInterval(timer);
+			for(var j=0;j<$length;j++){
+				$box1[j].style.display = "none";
+				$box2.children[j].className = "";
+			}
+			this.className = "on";
+			$box1[this.index].style.display = "block";
+			current = this.index +1;
+		}
+		$box2.children[u].onmouseout = function(){
+			timer = setInterval(go,2500);
+		}
+	}
+	
+	$box3.children[0].onclick = function(){
+		back();
+	}
+	$box3.children[1].onclick = function(){
+		go();
+	}
+	function back(){
+		for(var j =0;j<$length;j++){
+			$box1[j].style.display = "none";
+			$box2.children[j].className = "";
+		}
+		if(current == 0){
+			current = $length;
+		}
+		$box1[current-1].style.display = "block";
+		$box2.children[current-1].className = "on";
+		current--;
+	}
+}
+</script>
+
+</head>
+<body>
+	<div id="logo">
+		<a href="首页.html"><img src="image/背景栏3.png" alt=""width="100%"></a>
+
+	</div>
+	<div id="menu">
+		<a href="首页.html"><p>活动公告</p></a>
+		<a href="历史沿革.html"><p>历史沿革</p></a>
+		<a href="影像记录.html"><p>影像纪录</p></a>
+		<a href="桃李芬芳.html"><p>桃李芬芳</p></a>
+		<a href="展望未来.html"><p>展望未来</p></a>
+		<a href="回馈母系.html"><p>回馈母系</p></a>
+	</div>
+
+<div id="background">
+		<img src="image/背景图.png"height=150% alt="">
+	</div>
+<div id="news">
+	<div id="newsphoto">
+
+<div class="box">
+	<div class="box-1">
+		<ul>
+			<li>
+				<a href="logo新闻.html"><img src="turn/系庆logo.png"></img></a>
+				<h2>新闻系20周年系庆logo发布</h2>
+			</li>
+			<li>
+				<a href="历史沿革.html"><img src="turn/2017年记者节.jpeg"></img>
+				<h2>新闻历史沿革</h2></a>
+			</li>
+			<li>
+				<a href="桃李芬芳.html"><img src="turn/毕业系友.png" ></img>
+				<h2>二十如愿，初“新”未变</h2></a>
+			</li>
+			<li>
+				<a href="影像记录.html"><img src="turn/影视记录.jpeg" alt="这里是第一场图片"></img>
+				<h2>新闻系影像记录</h2></a>
+			</li>
+		</ul>
+	</div>
+	<div class="box-2">
+		<ul>
+		</ul>
+	</div>
+
+	<div class="box-3">
+		<span class="prev"> < </span>
+		<span class="next"> > </span>
+	</div>
+</div>
+
+</div>
+	<div class="newsletter">
+		<a href="https://flbook.com.cn/c/DszsaG7uDG"><div class="newspiece" style="margin-top:1.5%"><span>NEW</span> 04-11级新闻系实验报纸电子版合订本</div></a>
+		<a href="https://mp.weixin.qq.com/s/Z3_5gRkNcgeQtmd-KMl38w"><div class="newspiece">烟台大学第十九届记者节火热开展</div></a>
+		<div class="newspiece">新闻系系庆宣传片预告发布</div>
+		<a href="展望未来.html"><div class="newspiece">新闻系教师畅谈新闻系未来建设目标</div></a>
+		<a href="桃李芬芳.html"><div class="newspiece">二十如愿，初“新”未变--新闻系系友工作状况报告</div></a>
+		<div class="newspiece">新闻系发展历史图鉴</div>
+		<div class="newspiece" style="margin-bottom: 0;">回馈母系，为母系建设增砖添瓦</div>
+	</div>
+<div class="QA">
+	<a href="新闻系记忆.html"><div id="memory">请回答2002：<br>你在烟大新闻系最难忘的经历是什么</div></a>
+	<a href="薪火相传.html"><div id="speech">请回答2002：<br>你想对新闻系在读的学弟学妹说些什么</div></a>
+</div>
+
+	<div id="footer">
+		<p>Copyright 2022 GAO ZEYU</p>
+		<p style="display: inline-block;">友情链接:</p>
+		<a href="https://www.ytu.edu.cn/"><p class="link">烟台大学</p></a>
+		<a href="https://renwen.ytu.edu.cn"><p class="link">文学与新闻传播学院</p></a>
+		<a href="https://xiaoyou.ytu.edu.cn/"><p class="link">烟台大学校友网</p></a>
+	</div>
+
+
+</body>
+</html>
