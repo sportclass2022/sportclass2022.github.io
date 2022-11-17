@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>烟台大学新闻系20年系庆网</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		
+		#logo{
+			width: 100%;
+			font-size: 0;
+		}
+		#menu{
+			width: 100%;
+		}
+
+		#menu p{
+			float: left;
+			width: 16.66%;
+			height: 60px;
+			background-color: #661010;
+			color: white;
+			text-align: center;
+			margin: 0;
+			padding: 0;
+			font-size: 100%;
+			line-height: 60px;
+		}
+		#menu p:hover{background-color: #bf5a5a;}
+		#background{height: 100%;
+			position: fixed;
+			left: 0;
+			top: 0;
+			z-index: -1;
+		}
+		#videos{
+			width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			z-index: 1;
+			overflow: hidden;
+		
+		}
+		.clips{
+			width: 400px;
+			height: 270px;
+			margin-top: 30px;
+			margin-right: 40px;
+			margin-left: 40px;
+			text-align: center;
+			font-size: 20px;
+			line-height: 30px;
+			background-color: white;
+			border: 10px solid white;
+			color: black;
+		}
+		a{text-decoration: none;}
+
+		.clips:hover{background-color: #bf5a5a;
+			border: 10px solid #bf5a5a;
+			color: white;
+
+
+		}
+		#footer{
+			background-color:#661010 ;
+			width: 100%;
+			height: 100px;
+			color: white;
+			text-align: center;
+			position: relative;
+			bottom: -20px;
+			line-height: 40px;
+			margin-top: 30px;
+		}
+		.link{
+			display: inline-block;
+			border: 1px solid white;
+			color: white;
+			width: 140px;
+			height: 25px;
+			font-size: 14px;
+			height: 30px;
+			margin: 5px;
+			line-height: 30px;
+
+		}
+		@media(min-width:700px){
+			#lianjie{
+				padding-left: 120px;
+			}
+			#copyright{
+				padding-left: 150px;
+			}
+		}
+		@media(max-width:700px){
+			#lianjie{
+				display: none;
+			}
+			#copyright{
+				line-height: 100px;
+				padding-left:0
+			}
+		}
+		#footer img:hover{
+			background-color: white;
+		}
+
+	</style>
+
+</head>
+<body>
+	<div id="logo">
+		<a href="首页.html"><img src="image/背景栏3.png" alt=""width="100%"></a>
+	</div>
+	<div id="menu">
+		<a href="首页.html"><p>活动公告</p></a>
+		<a href="历史沿革.html"><p>历史沿革</p></a>
+		<a href="影像记录.html"><p>影像纪录</p></a>
+		<a href="桃李芬芳.html"><p>桃李芬芳</p></a>
+		<a href="展望未来.html"><p>展望未来</p></a>
+		<a href="回馈母系.html"><p>回馈母系</p></a>
+	</div>
+
+	<div id="background">
+		<img src="image/背景图.jpg"height=150% alt="">
+	</div>
+		<div id= "videos">
+			<a href="系庆20年宣传片.html"><div class="clips"><img src="image/系庆片头.png"width="400px" alt="">新闻系20周年系庆宣传片</div></a>
+			<a href="新闻系招生宣传片.html"><div class="clips"><img src="image/招生宣传片缩略图.png" width="400px" alt="">新闻系招生宣传片</div></a>
+			<a href="2021记者节开幕视频.html"><div class="clips"><img src="image/2021记者节开幕.jpg" width="400px" height="225px"alt="">2021年记者节开幕视频</div></a>
+			<a href="2019记者节.html"><div class="clips"><img src="image/2019记者节.jpeg" width="400px" height="225px" alt="">2019年记者节开幕视频</div></a>
+			<a href="2018记者节.html"><div class="clips"><img src="turn/影视记录.jpeg" width="400px" height="225px" alt="">2018年记者节开幕视频</div></a>
+			<a href="2002.html"><div class="clips"><img src="image/2002.jpeg" width="400px" height="225px" alt="">2002年新闻风</div></a>
+
+		</div>
+
+	<div id="footer">
+		<p style="display:inline-block;margin:25px 20px 25px 0; float: right;"><a href="https://space.bilibili.com/1071265678?spm_id_from=333.1007.0.0"><img src="image/bili.png"alt="" width="50px"></a></p>
+		<p style="display:inline-block;margin:25px 10px 25px 0; float: right;"><a href="https://v.douyin.com/rUND7Hw/"><img src="image/tiktok.png"alt="" width="50px"></a></p>
+		<div id="copyright">Copyright 2022 GAO ZEYU</div>
+		<div id="lianjie">
+		<p style="display: inline-block;">友情链接:</p>
+		<a href="https://www.ytu.edu.cn/"><p class="link">烟台大学</p></a>
+		<a href="https://renwen.ytu.edu.cn"><p class="link">文学与新闻传播学院</p></a>
+		</div>
+	</div>
+</body>
+</html>

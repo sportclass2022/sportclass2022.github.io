@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>请回答2002：新闻系记忆</title>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+:root {
+    --border-color: #7591AD;
+    --text-color: #34495e;
+    --color1: white;
+    --color2: #bbc8ca;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #646873;
+}
+#header{
+    width: 100%;
+}
+
+
+#talk {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif, Arial, 'Microsoft Yahei';
+    flex-wrap: wrap;
+
+}
+
+p {
+    width: 300px;
+    margin: 50px;
+    padding: 10px;
+    background-color: var(--color1);
+    border-radius: 11px;
+    /* 投影 */
+    box-shadow: 7px 7px var(--color2);
+    /* 动画效果 50%的时候向上移动20px */
+    animation: animate1 4s ease-in-out infinite;
+}
+
+/* 实现底部横线与圆点 */
+
+p::after, p::before {
+    position: absolute;
+    content: '';
+    height: 11px;
+    left: 6px;
+    background-color: var(--color1);
+    border-radius: 11px;
+    /* 投影 */
+    box-shadow: 7px 7px var(--color2);
+}
+
+/* 单独定义底部横线的样式，宽度为50px */
+
+p::after {
+    width: 50px;
+    bottom: -25px;
+    /* 动画效果 50%的时候向上移动10px 加上P元素向上移动20，真实移动像素为20+10px */
+    animation: animate2 4s ease-in-out infinite;
+}
+
+/* 单独定义底部圆点的样式，宽度为11px */
+
+p::before {
+    width: 11px;
+    bottom: -50px;
+    /* 动画效果 50%的时候向上移动15px 加上P元素向上移动20，真实移动像素为20+15px */
+    animation: animate3 4s ease-in-out infinite;
+}
+
+@keyframes animate1 {
+    /* 初始化和结束状态为默认 */
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+@keyframes animate2 {
+    /* 初始化和结束状态为默认 */
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes animate3 {
+    /* 初始化和结束状态为默认 */
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+
+</style>
+</head>
+
+<body>
+
+<div id="header">
+    <div id="zhonglou">
+        <img src="image/学弟学妹.jpg" width="100%" alt="">
+    </div>
+</div>
+
+<div id="talk">
+<p> 修个二专吧，增加些核心竞争力，这个专业可替代性太强。  </p>
+<p> 一定要在学校期间就做好自己的职业规划，考公的话尽早准备。    </p>
+<p> 年轻就意味着无限可能  </p>
+<p> 加油，未来可期 </p>
+<p> 珍惜好大学时期的每一天时光，多做有意义的事情  </p>
+<p> 人生的每一步都算数，认真走好每一步！  </p>
+<p> 爱在烟大 难以离开   </p>
+<p> 享受当下    </p>
+<p> 毕业别着急工作，先考个研，考个公    </p>
+<p> 利用一切机会去实习，去看看外面的世界  </p>
+<p> 珍惜大学生活  </p>
+<p> 我们都有美好的未来。  </p>
+<p> 铁肩担道义，妙手著文章。    </p>
+<p> 珍惜每一个际遇 </p>
+<p> 不忘初心，砥砺前行，放眼未来！ </p>
+<p> 珍惜大把大把能够专心学习的时光 </p>
+<p> 珍惜在校时光，不忘初心砥砺前行 </p>
+<p> 好好学习，天天向上。先做人后做事。   </p>
+<p> 没有一种坚持会被辜负。 </p>
+<p> 多读书，养成独立思考的能力   </p>
+<p> 放肆的享受自己的大学生活    </p>
+<p> 把握当下，用有限的青春做出无限的可能  </p>
+<p> 慎思笃行    </p>
+<p> 好好享受大学时光！   </p>
+<p> 道阻且长，行则将至！  </p>
+<p> 我辈既务斯业，便当专心用功，以后名扬四海，根据即在年轻 </p>
+<p> 四年很长又很短，文明其精神，野蛮其体魄。    </p>
+<p> 实践出真知   </p>
+<p> 好好学习，不负韶华。  </p>
+<p> 多读多看 多走多听 多学多做  </p>
+<p> 天道酬勤    </p>
+<p> 珍惜大学时光，多学技能，多实习，为自己以后的职业规划打好基础  </p>
+<p> 大学也需要认真学习，新闻系所教授的东西，无论以后是否从事传媒行业，都是能够用到的。   </p>
+<p> 你所养成的新闻素养将是你一生很大的财富，不论职业为何，都要以学过4年的新闻专业而自豪。 </p>
+<p> 多元化是媒体的趋势，我们要顺势而为。  </p>
+<p> 向下扎根，向上生长。  </p>
+<p> 多读书，多实践 </p>
+<p> 饱学知识，躬身实践   </p>
+<p> 活出自我    </p>
+<p> 静心专注于某个领域，厚积薄发，展示自身的特质。 </p>
+<p> 学会自主学习  </p>
+<p> 烟大新闻系是宽容的，成为你想成为的样子吧！   </p>
+<p> 好好学习，充实自己，将来到社会才能游刃有余。  </p>
+<p> 好好学习    </p>
+<p> 珍惜在母校的每一天，多读书，多交朋友  </p>
+<p> 加油！不要让自己闲下来，多读书 </p>
+<p> 心灵自由，思想自由，做有趣的灵魂。   </p>
+<p> 未来有无限可能 </p>
+<p> 珍惜时光，多实践，增长本领。  </p>
+<p> 规划好职业生涯 </p>
+
+</div>
+
+</body>
+
+</html>
